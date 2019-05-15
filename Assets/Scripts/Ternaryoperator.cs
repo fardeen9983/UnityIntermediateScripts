@@ -19,7 +19,7 @@ public class Ternaryoperator : MonoBehaviour
             //Shoot
             clip--;
         else
-            //Reload
+            //Reload    
             clip = Random.Range(10, 101);
 
         Debug.Log("Clip : " + clip);
