@@ -27,7 +27,7 @@ class Rectangle
     float length, width;
 
     public Rectangle(float length, float width) { this.length = length;  this.width = width;  }
-    public float area() { return length * width;  }
+    public virtual float area() { return length * width;  }
 }
 
 //Inheriting Rectangle class
@@ -38,5 +38,5 @@ class Square : Rectangle
     public Square(float side) : base(side, side) { this.side = side;  }
 
     //Hide superclass method of the same name
-    public float area() { return side * side;  }
+    public override float area() { return side * side;  }
 }

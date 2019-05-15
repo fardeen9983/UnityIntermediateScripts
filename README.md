@@ -59,9 +59,17 @@ T GenericMethod<T>(T param) where T : constraint
     return param;
 }
 ```
-## Inheritance
+## Inheritance and Polymorphism
 It is OOP concept allowing one class to inherit from other class it's public and private members usingthe ' : ' operator. 
 
 The class being inherited is called super/base class and the one inheriting it is called the sub/derived class.
 
 base keyword is used to access base class methods from derived class.
+
+To stop overriding we can place ' new ' keyword infront of child class members with same name as parent class, this will call the parent class version of the member no matter if we use the child class object
+## Overriding
+Whenever the members of base class are redefined by the child class they are practically hidden. So the child method will now all only it's version of parent class members.
+
+But simply redefining them isn't sufficient as the C# compiler will complain of method overriding
+
+In such scenarios we can specify the parent method to be virtual. If the child class wants to redefine this method they will have to override it, or else the parent method will be called.
