@@ -59,3 +59,9 @@ T GenericMethod<T>(T param) where T : constraint
     return param;
 }
 ```
+## Inheritance
+It is OOP concept allowing one class to inherit from other class it's public and private members usingthe ' : ' operator. 
+
+The class being inherited is called super/base class and the one inheriting it is called the sub/derived class.
+
+base keyword is used to access base class methods from derived class.
