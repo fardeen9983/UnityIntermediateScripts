@@ -35,3 +35,27 @@ Example :
 int add(int a,int b) { return a + b; }
 //Concatenation of strings
 string add(string a, string b) { return a + b; }
+```
+## Generics :
+It allows methods and classes to work with any type of data. Unlike method arguments the types of generic data is not predefined and it can hold any class and other data.
+
+Example:
+```c#
+Renderer renderer = GetComponent<Renderer>()
+```
+The GetComponent method takes a type as an argument and returns a component reference matching the given type.
+
+We cannot perform many operations on the Generic types as their behaviour is unknown. But we can place constraint on Generic values to easily perform operations. These constraints are :
+1. class - To see if T is a class
+1. struct - To see if T is a strucutre
+1. new() - To see if T has a no-arg constructor
+1. MonoBehaviour - To see if T is an object of particular class
+
+Example
+```c#
+T GenericMethod<T>(T param) where T : constraint
+{
+    //sone code
+    return param;
+}
+```
