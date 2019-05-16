@@ -170,3 +170,7 @@ We can assign a number of methods to the delegate and call them all at once (Mul
 Attributes are addtional properties that can be added to methosds, variables and classes. Attributes are wriiten directly abovew or below the code they are modifying. They are denoted by [] with some keywords inside like Range, ExecuteInEditMode
 
 Be cautious when in ExecuteInEditMode as it will make changes to the scene which cannot be reverted
+## Events
+Events are specialized delegates used for alerting other classes of occurence of certain events. It is like a broadcaster which can be subscribed to by any class who wish to recieve its notification of certain situation occurence.
+
+Events are equivalent to public multicasted delegates.
