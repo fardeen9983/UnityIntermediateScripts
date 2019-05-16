@@ -164,3 +164,5 @@ Declarartion: Very similar to function declaration with delegate keywoed added
 delegate void DelegateName(int arg);
 ```
 delegate keyword is used to declare a keyword and it has a signature similar to a function. Next we can assign functions with the same signatures to the delegate.
+
+We can assign a number of methods to the delegate and call them all at once (Multicasting)
