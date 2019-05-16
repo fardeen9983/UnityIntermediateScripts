@@ -38,5 +38,5 @@ class Square : Rectangle
     public Square(float side) : base(side, side) { this.side = side;  }
 
     //Hide superclass method of the same name
-    public override float area() { return side * side;  }
+    public override float area() { return side * side; }
 }

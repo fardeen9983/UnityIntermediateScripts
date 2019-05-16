@@ -73,3 +73,12 @@ Whenever the members of base class are redefined by the child class they are pra
 But simply redefining them isn't sufficient as the C# compiler will complain of method overriding
 
 In such scenarios we can specify the parent method to be virtual. If the child class wants to redefine this method they will have to override it, or else the parent method will be called.
+## Interface
+These are collections of constants and undefined mehtods which have to be defined by the classes implementing these interfaces.
+
+Interfaces can create references to classes that implement them but cannot be instantiated themselves.
+
+Interfaces are declared by the Interface similar to how we declare a class.
+
+Inheriting is restricted to one base class while a class can implement any number of interfaces, allowing many unrelated classes to share wide variety of functionality
+
