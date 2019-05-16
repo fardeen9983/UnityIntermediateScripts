@@ -82,3 +82,7 @@ Interfaces are declared by the Interface similar to how we declare a class.
 
 Inheriting is restricted to one base class while a class can implement any number of interfaces, allowing many unrelated classes to share wide variety of functionality
 
+## Extensions
+Extension methods allow adding to the functionality of a type without deriving a new one or modifying the existing one. 
+
+Extension methods are placed in non-generic, static class. static and extension methods have a major differernce that extension methods uses this keyword when working on members.
