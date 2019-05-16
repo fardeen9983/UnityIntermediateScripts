@@ -86,3 +86,38 @@ Inheriting is restricted to one base class while a class can implement any numbe
 Extension methods allow adding to the functionality of a type without deriving a new one or modifying the existing one. 
 
 Extension methods are placed in non-generic, static class. static and extension methods have a major differernce that extension methods uses this keyword when working on members.
+## namespace
+Namespaces are conatiner for classes used to prevent naming conflicts between classes and define boundaries for access methods on class members.
+
+We can refer to all the contents of a namespace in our code by using the ' using ' keyword
+```c#
+using UnityEngine;
+```
+
+To decalre a namespace for our class we can enclose it using the namespace keyword
+```c#
+namespace Sample
+{
+    public class Demo : MonoBehaviour
+    {
+        //Some code
+    }
+
+    //Other classes
+}
+```
+
+We can also access namespace code using dot operator, but it is a bit cumbersome
+```c#
+//Access Demo class of namespace Sample
+Sample.Demo demo = new Sample.Demo();
+```
+
+Two Namespaces can have same methods which leads to ambiguity. To reslove this we should use namespace
+```c#
+//Both UnityEngine and System namespaces have Random method. To resolve conflict specify which one is used
+UnityEngine.Random
+//or
+System.Random
+```
+
