@@ -166,3 +166,7 @@ delegate void DelegateName(int arg);
 delegate keyword is used to declare a keyword and it has a signature similar to a function. Next we can assign functions with the same signatures to the delegate.
 
 We can assign a number of methods to the delegate and call them all at once (Multicasting)
+## Attributes
+Attributes are addtional properties that can be added to methosds, variables and classes. Attributes are wriiten directly abovew or below the code they are modifying. They are denoted by [] with some keywords inside like Range, ExecuteInEditMode
+
+Be cautious when in ExecuteInEditMode as it will make changes to the scene which cannot be reverted
