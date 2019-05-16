@@ -121,3 +121,36 @@ UnityEngine.Random
 System.Random
 ```
 
+## Lists
+They are dynamically sized arrays with added functionality. Elements can be deleted, modified and added anytime after initialisation. They are generic
+
+We can easily loop through, remove element and find one and access an element through index
+## Dictionaries 
+These are collection of key value pairs defined by { } braces and the Dictionary keyword.
+## Coroutines
+They are functions executed in intervals. It is basically a function called inside another function. THe differernce being that in front of all return statements we place keyword ' yield' to signify that the coroutine has given up execution priority to the immediate outside block from where it was called.
+
+On yeidling a null IEnumerator the coroutine will yield execution and wait for the next update.
+
+Coroutines return an IEnumerator value. They are started by 
+> StartCoroutine( CoroutineCall ( ... ) );
+
+## Quaternion
+Quaternion are used to represent to reperesent Transform rotation. They are similar to vectors and have 4 components: (x, y, z, w)
+
+Never adjust these components individually
+
+Unity has provided Eulaer angles to handle rotations by Quaternion. Euler angles work on the rotation angles of axis. For this purpose al Quaternions are first converted to Euler angles and then represented in the inspector for use.
+
+The reason for stil using Quaternion is Gimble law which poses problems during incremental rotations. This is not present in the case of Quaternions.
+
+Example script : Rotation of one object relative to other pbject's movement. 
+
+This can be achieved by using either the LookAt or Slerp function. 
+1. LookRotation function takes the position vector and returns a relative Quaternion rotation to give the feel as if the object is being looked at
+2. To make things appear more realistic the Slerp function which increasingly interpolate values of movement to rotation over time. It takes current local rotation of observer and the LookRotation Quaternion of Relative position vector and the time rate and returns a relative quaternion,giving a better, realisitic rotation approach.  
+
+To set the rotation of a GameObject to Euler angle values (0,0,0) use Quaternion.Identity, to give 0 rotation about any axis.
+```c#
+transform.rotation = Quaternion.identity;
+```
