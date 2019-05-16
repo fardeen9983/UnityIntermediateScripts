@@ -154,3 +154,13 @@ To set the rotation of a GameObject to Euler angle values (0,0,0) use Quaternion
 ```c#
 transform.rotation = Quaternion.identity;
 ```
+## Delegates
+They are containers of function which can be passed around through scripts and classes and used to build robust and complex behaviours for scripts.
+
+Unlike variables that hold values they hold functions; they can initialised and modified at runtime
+
+Declarartion: Very similar to function declaration with delegate keywoed added
+```c#
+delegate void DelegateName(int arg);
+```
+delegate keyword is used to declare a keyword and it has a signature similar to a function. Next we can assign functions with the same signatures to the delegate.
